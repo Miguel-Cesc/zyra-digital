@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#003F46"/>
+      <stop offset="1" stop-color="#003C43"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g transform="translate(900,90) scale(6)" fill="#ffffff" opacity="0.06">
+    <path d="M32 2c1.4 9.6 4.7 16.6 9.9 21.1C47.1 27.6 54 30.6 64 32c-9.6 1.4-16.6 4.7-21.1 9.9C38.4 47.1 35.4 54 32 64c-1.4-9.6-4.7-16.6-9.9-21.1C16.9 37.4 10 34.4 0 32c9.6-1.4 16.6-4.7 21.1-9.9C25.6 16.9 28.6 10 32 2z"/>
+  </g>
+  <g transform="translate(96,238)" fill="#ffffff">
+    <g transform="scale(1.4)">
+      <path d="M0 0c.7 4.8 2.4 8.3 4.95 10.55C7.55 12.8 11 14.3 16 15.25c-4.8.7-8.3 2.35-10.55 4.95C3.15 22.55 1.65 26 .8 31c-.7-4.8-2.35-8.3-4.95-10.55C-6.55 18.2-10 16.7-15 15.75c4.8-.7 8.3-2.35 10.55-4.95C-2.2 8.2-.7 4.75 0 0z"/>
+    </g>
+    <text x="40" y="22" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="32" letter-spacing="6">ZYRA DIGITAL</text>
+  </g>
+  <text x="96" y="380" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="76" fill="#ffffff" letter-spacing="-2">A digital presence</text>
+  <text x="96" y="465" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="76" fill="#ffffff" letter-spacing="-2">your business can rely on.</text>
+  <text x="96" y="545" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="26" fill="#ffffff" opacity="0.7">Fast. Secure. Clear. Built for modern business.</text>
+</svg>
