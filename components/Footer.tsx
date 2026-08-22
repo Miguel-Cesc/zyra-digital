@@ -37,8 +37,8 @@ export function Footer() {
         <div className="lg:col-span-4 flex flex-col gap-6">
           <Logo tone="light" size="md" />
           <p className="text-white/55 text-[15px] leading-relaxed max-w-sm">
-            We make your ads and we run them. Video and still creative for
-            Australian businesses, live in 48 hours.
+            We make your ads and we run them. AI video and still creative for
+            Australian businesses, live in 24 hours.
           </p>
           <div className="text-[13px] text-white/40 leading-relaxed">
             <span className="eyebrow text-white/30">Based in</span>

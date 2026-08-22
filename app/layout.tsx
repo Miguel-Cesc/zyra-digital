@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s · ZYRA DIGITAL",
   },
   description:
-    "ZYRA DIGITAL makes video and image ads for Australian businesses and runs the campaigns behind them. Live in 48 hours, with nothing for you to write, film or brief. Brisbane.",
+    "ZYRA DIGITAL makes AI video and image ads for Australian businesses and runs the campaigns behind them. Live in 24 hours, with nothing for you to write, film or brief. Brisbane.",
   keywords: [
     "Meta ads Brisbane",
     "Facebook ads agency Australia",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "ZYRA DIGITAL",
     title: "ZYRA DIGITAL · We make your ads and we run them",
     description:
-      "Video and image ads that convert, live in 48 hours, with nothing for you to brief. Brisbane, Australia.",
+      "AI video and image ads that convert, live in 24 hours, with nothing for you to brief. Brisbane, Australia.",
     images: [
       {
         url: "/og-image.svg",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ZYRA DIGITAL · We make your ads and we run them",
     description:
-      "Video and image ads that convert, live in 48 hours. Brisbane, Australia.",
+      "AI video and image ads that convert, live in 24 hours. Brisbane, Australia.",
     images: ["/og-image.svg"],
   },
   icons: {

@@ -1,11 +1,11 @@
 import { Spark } from "./Spark";
 
 export const TICKER_TOP = [
-  "48 hours from brief to live",
-  "Video and image creative",
-  "30+ businesses advertised for",
+  "24 hours from brief to live",
+  "AI video and image creative",
+  "100+ businesses advertised for",
   "No lock-in",
-  "Money back if we miss",
+  "Money-back guarantee",
   "Brisbane, Australia",
 ];
 
@@ -14,7 +14,7 @@ export const TICKER_MID = [
   "Meta and Google",
   "Your ad account, not ours",
   "Ad spend paid straight to the platform",
-  "New creative every month",
+  "New creative every month, not one shoot a year",
   "Reported against your revenue",
 ];
 

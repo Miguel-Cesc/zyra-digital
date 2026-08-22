@@ -3,9 +3,8 @@ import { Hero } from "@/components/Hero";
 import { Ticker, TICKER_TOP, TICKER_MID } from "@/components/Ticker";
 import { Reel, Demos } from "@/components/Demos";
 import {
-  GuaranteePromise,
   HowItWorks,
-  Toolkit,
+  WhyAI,
   About,
   FinalCTA,
 } from "@/components/Sections";
@@ -44,10 +43,9 @@ export default function HomePage() {
         <Hero />
         <Reel />
         <Ticker items={TICKER_TOP} tone="light" />
-        <GuaranteePromise />
         <HowItWorks />
         <Demos />
-        <Toolkit />
+        <WhyAI />
         <Ticker items={TICKER_MID} reverse />
         <Pricing />
         {/* Renders nothing until real, permissioned client results exist. */}

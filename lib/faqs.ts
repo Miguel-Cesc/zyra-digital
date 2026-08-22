@@ -6,7 +6,7 @@
 export const FAQS = [
   {
     q: "What do I actually get?",
-    a: "Ads. Video and still image both, built from the photos already on your own site, and on the larger plans we build and run the campaigns as well. Everyone starts with a first month before any ongoing arrangement begins.",
+    a: "Ads. Video and still image both, generated from the photos already on your own site, and on the larger plans we build and run the campaigns as well. Everyone starts with a first month before any ongoing arrangement begins.",
   },
   {
     q: "How much of my time does this take?",
@@ -14,7 +14,7 @@ export const FAQS = [
   },
   {
     q: "How fast is it really?",
-    a: "Forty-eight hours from the moment you send the link to ads running, in the ordinary case. It is that fast because most of the making is automated rather than because anybody is rushing.",
+    a: "Twenty-four hours from the moment you send the link to ads running, in the ordinary case. It is that fast because the creative is generated rather than booked, filmed and edited, not because anybody is rushing.",
   },
   {
     q: "Is the free ad really free?",
@@ -26,7 +26,7 @@ export const FAQS = [
   },
   {
     q: "Are the ads AI-generated?",
-    a: "Partly. Every ad opens on a real photograph of your real product, and what moves after that is generated. No synthetic person ever speaks to camera in an ad we make, and we will not put a claim in someone's mouth that you cannot substantiate.",
+    a: "Yes, and that is the point. Generating the creative is what lets you have new ads in the account every month, tested against each other, for a fraction of what a videographer, an editor and a studio day cost. The guardrails: every ad opens on a real photograph of your real product, never stock, a person signs off on all of it before it runs, no synthetic person ever speaks to camera in an ad we make, and we will not put a claim in someone's mouth that you cannot substantiate.",
   },
   {
     q: "Whose ad account is it?",

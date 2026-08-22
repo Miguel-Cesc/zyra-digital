@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Spark } from "./Spark";
-import { Cta } from "./ui";
+import { Chip, Cta } from "./ui";
 
 export function Hero() {
   const reduced = useReducedMotion();
@@ -39,19 +39,12 @@ export function Hero() {
 
       <div className="container-x relative pt-28 sm:pt-32 md:pt-44 pb-24 md:pb-32 flex flex-col items-center text-center">
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-2"
           custom={0}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
         >
-          <span className="pill-light !bg-emerald-400/[0.10] !border-emerald-300/25 text-emerald-100">
-            <span className="live-dot" aria-hidden="true" />
-            <span className="tracking-wider2">TAKING NEW CLIENTS</span>
-          </span>
-          <span className="pill-light">
-            <span className="tracking-wider2">BRISBANE, AU</span>
-          </span>
+          <Chip tone="light">AI ad creative &middot; Brisbane, Australia</Chip>
         </motion.div>
 
         <motion.h1
@@ -73,9 +66,9 @@ export function Hero() {
           animate="visible"
           variants={fadeUp}
         >
-          Video and image ads that convert, live inside 48 hours, with nothing
-          for you to write, film or brief. Send us a link to what you sell.
-          We do the rest and we run the campaigns behind it.
+          AI-made video and image ads, live inside 24 hours, with nothing for
+          you to write, film or brief. Send a link to what you sell. We build
+          the creative, then we run the campaigns behind it.
         </motion.p>
 
         <motion.div
@@ -106,9 +99,9 @@ export function Hero() {
           variants={fadeUp}
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-            <HeroStat value="48" suffix="hr" label="From brief to live" />
-            <HeroStat value="0" suffix="" label="Hours of your time" />
-            <HeroStat value="$0" suffix="" label="Cost of your first ad" />
+            <HeroStat value="24" suffix="hr" label="From your link to live ads" />
+            <HeroStat value="1" suffix="reply" label="All we need from you" />
+            <HeroStat value="$0" suffix="" label="To see your first ad" />
           </div>
         </motion.div>
 

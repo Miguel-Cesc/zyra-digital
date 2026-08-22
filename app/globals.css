@@ -241,29 +241,6 @@ body {
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 60px);
 }
 
-/* Live status dot (pulsing) */
-.live-dot {
-  position: relative;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 9999px;
-  background: #34d399;
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
-  animation: live-pulse 2s ease-out infinite;
-}
-@keyframes live-pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55);
-  }
-  70% {
-    box-shadow: 0 0 0 8px rgba(52, 211, 153, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
-  }
-}
-
 /* Marquee animation */
 @keyframes marquee {
   from {
