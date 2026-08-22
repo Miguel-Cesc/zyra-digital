@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Globe, ArrowUpRight, Check } from "lucide-react";
-import { SectionLabel } from "./SectionLabel";
+import { Check } from "lucide-react";
+import { Chip } from "./ui";
 import { Reveal } from "./Reveal";
 
 export function Contact() {
@@ -41,55 +41,43 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative bg-cloud py-32 md:py-40 overflow-hidden"
+      className="relative bg-white py-28 md:py-36 overflow-hidden"
     >
       <div className="container-x grid lg:grid-cols-12 gap-y-14 lg:gap-x-16">
         <Reveal className="lg:col-span-5">
-          <SectionLabel>Contact</SectionLabel>
+          <Chip>Contact</Chip>
           <h2 className="h-display mt-6 text-4xl md:text-5xl lg:text-[56px] text-ink">
-            Let&rsquo;s build
+            Tell us what
             <br />
-            <span className="text-ink/40">something solid.</span>
+            <span className="text-ink/40">you sell.</span>
           </h2>
           <p className="mt-7 text-ink/65 text-lg leading-relaxed max-w-md">
-            Tell us about your business and what you need. We&rsquo;ll come
-            back with a clear next step.
+            Send us your business name and a link to your products. We&rsquo;ll
+            come back with a free ad and a straight answer about whether we can
+            help.
           </p>
 
-          <ul className="mt-12 space-y-5 text-[15px]">
-            <li className="flex items-start gap-4 text-ink/75">
-              <span className="w-10 h-10 shrink-0 rounded-full bg-white border border-black/5 flex items-center justify-center text-teal-deep shadow-card">
-                <Mail className="w-4 h-4" />
-              </span>
-              <div>
-                <div className="eyebrow text-ink/40">Email</div>
+          <dl className="mt-12 flex flex-col gap-6">
+            <div>
+              <dt className="eyebrow text-ink/40">Email</dt>
+              <dd className="mt-1">
                 <a
-                  href="mailto:admin@zyradigital.org"
-                  className="link-underline text-ink"
+                  href="mailto:miguel@zyradigital.org"
+                  className="link-underline text-ink text-[17px]"
                 >
-                  admin@zyradigital.org
+                  miguel@zyradigital.org
                 </a>
-              </div>
-            </li>
-            <li className="flex items-start gap-4 text-ink/75">
-              <span className="w-10 h-10 shrink-0 rounded-full bg-white border border-black/5 flex items-center justify-center text-teal-deep shadow-card">
-                <Globe className="w-4 h-4" />
-              </span>
-              <div>
-                <div className="eyebrow text-ink/40">Web</div>
-                <span className="text-ink">zyradigital.org</span>
-              </div>
-            </li>
-            <li className="flex items-start gap-4 text-ink/75">
-              <span className="w-10 h-10 shrink-0 rounded-full bg-white border border-black/5 flex items-center justify-center text-teal-deep shadow-card">
-                <MapPin className="w-4 h-4" />
-              </span>
-              <div>
-                <div className="eyebrow text-ink/40">Based in</div>
-                <span className="text-ink">Brisbane, Australia</span>
-              </div>
-            </li>
-          </ul>
+              </dd>
+            </div>
+            <div>
+              <dt className="eyebrow text-ink/40">Based in</dt>
+              <dd className="mt-1 text-ink text-[17px]">Brisbane, Australia</dd>
+            </div>
+            <div>
+              <dt className="eyebrow text-ink/40">Reply time</dt>
+              <dd className="mt-1 text-ink text-[17px]">One business day</dd>
+            </div>
+          </dl>
         </Reveal>
 
         <Reveal direction="up" delay={0.1} className="lg:col-span-7">
@@ -112,11 +100,34 @@ export function Contact() {
               required
               placeholder="you@example.com"
             />
-            <Field
-              label="What you need"
-              name="needs"
-              placeholder="Website, hosting, SEO, AI search…"
-            />
+            <div className="flex flex-col gap-2">
+              <label className="eyebrow text-ink/50" htmlFor="needs">
+                What you&rsquo;re after
+              </label>
+              <select id="needs" name="needs" className="field" defaultValue="">
+                <option value="" disabled>
+                  Choose the closest one
+                </option>
+                <option value="Free ad">
+                  Just the free ad for now — $0
+                </option>
+                <option value="First month">
+                  Try a first month, everything done for me — $2,000
+                </option>
+                <option value="Creative">
+                  Make the ads, I&rsquo;ll run them — from $1,500/mo
+                </option>
+                <option value="Creative + Media Buying">
+                  Make the ads and run them for me — from $3,000/mo + ad spend
+                </option>
+                <option value="Full Funnel">
+                  All of that plus landing pages — from $4,500/mo + ad spend
+                </option>
+                <option value="Not sure">
+                  Not sure — tell me what fits
+                </option>
+              </select>
+            </div>
             <div className="flex flex-col gap-2">
               <label className="eyebrow text-ink/50" htmlFor="message">
                 Message
@@ -125,7 +136,7 @@ export function Contact() {
                 id="message"
                 name="message"
                 rows={5}
-                placeholder="Tell us a little about your project."
+                placeholder="What do you sell, and where are you advertising it now?"
                 className="field-textarea"
               />
             </div>
@@ -134,7 +145,7 @@ export function Contact() {
               <div className="mt-2 flex items-center gap-3 rounded-xl border border-teal-deep/20 bg-teal-deep/[0.04] px-4 py-3 text-teal-deep">
                 <Check className="w-4 h-4" />
                 <span className="text-sm font-medium">
-                  Thanks. We&rsquo;ll be in touch shortly.
+                  Got it. We&rsquo;ll come back within a business day.
                 </span>
               </div>
             ) : (
@@ -149,10 +160,7 @@ export function Contact() {
                   disabled={sending}
                   className="btn-primary mt-2 w-full sm:w-fit group disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {sending ? "Sending…" : "Send Enquiry"}
-                  {!sending && (
-                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  )}
+                  {sending ? "Sending…" : "Send it"}
                 </button>
               </>
             )}

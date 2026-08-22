@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const TO = process.env.CONTACT_EMAIL || "admin@zyradigital.org";
+  const TO = process.env.CONTACT_EMAIL || "miguel@zyradigital.org";
 
   const html = [
     `<h2>New enquiry from zyradigital.org</h2>`,

@@ -121,7 +121,7 @@ export default function TermsPage() {
         Brisbane, Queensland, Australia
         <br />
         Email:{" "}
-        <a href="mailto:admin@zyradigital.org">admin@zyradigital.org</a>
+        <a href="mailto:miguel@zyradigital.org">miguel@zyradigital.org</a>
       </p>
     </LegalLayout>
   );

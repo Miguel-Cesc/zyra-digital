@@ -6,14 +6,14 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "ZYRA DIGITAL",
     short_name: "ZYRA",
     description:
-      "Digital systems that work. Brisbane-based web design, hosting, SEO and AI search.",
+      "We make your ads and we run them. Video and image creative for Australian businesses. Brisbane.",
     start_url: "/",
     scope: "/",
     display: "standalone",
     orientation: "any",
     background_color: "#ffffff",
     theme_color: "#003F46",
-    categories: ["business", "technology"],
+    categories: ["business", "marketing"],
     icons: [
       {
         src: "/favicon.svg",

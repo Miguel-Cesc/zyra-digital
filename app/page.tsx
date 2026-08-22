@@ -1,16 +1,16 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Marquee } from "@/components/Marquee";
+import { Ticker, TICKER_TOP, TICKER_MID } from "@/components/Ticker";
+import { Reel, Demos } from "@/components/Demos";
 import {
-  TrustStrip,
+  GuaranteePromise,
+  HowItWorks,
+  Toolkit,
   About,
-  Services,
-  StandardsData,
-  Standards,
-  Process,
-  Management,
   FinalCTA,
 } from "@/components/Sections";
+import { Pricing } from "@/components/Pricing";
+import { Proof } from "@/components/Proof";
 import { FAQ } from "@/components/FAQ";
 import { FAQStructuredData } from "@/components/FAQStructuredData";
 import { Contact } from "@/components/Contact";
@@ -39,17 +39,20 @@ export default function HomePage() {
         }}
       />
       <FAQStructuredData />
-      <Header />
-      <main id="top">
+      <Header overlay />
+      <main id="top" className="-mt-16 md:-mt-20">
         <Hero />
-        <TrustStrip />
-        <Marquee />
+        <Reel />
+        <Ticker items={TICKER_TOP} tone="light" />
+        <GuaranteePromise />
+        <HowItWorks />
+        <Demos />
+        <Toolkit />
+        <Ticker items={TICKER_MID} reverse />
+        <Pricing />
+        {/* Renders nothing until real, permissioned client results exist. */}
+        <Proof />
         <About />
-        <Services />
-        <StandardsData />
-        <Standards />
-        <Process />
-        <Management />
         <FAQ />
         <FinalCTA />
         <Contact />

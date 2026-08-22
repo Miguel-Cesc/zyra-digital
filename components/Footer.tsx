@@ -3,26 +3,26 @@ import { Logo } from "./Logo";
 import { Spark } from "./Spark";
 
 const NAV_LINKS = [
+  { href: "/#how", label: "How it works" },
+  { href: "/#work", label: "The work" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/guarantee", label: "Guarantee" },
   { href: "/#about", label: "About" },
-  { href: "/#services", label: "Services" },
-  { href: "/#standards", label: "Standards" },
-  { href: "/#process", label: "Process" },
-  { href: "/#insights", label: "Insights" },
+  { href: "/#faq", label: "FAQ" },
   { href: "/#contact", label: "Contact" },
 ];
 
 const SERVICE_LINKS = [
-  "Websites",
-  "Hosting & Setup",
-  "Digital Marketing",
-  "Analytics",
-  "SEO",
-  "GEO / AI Search",
-  "Management",
-  "Landing Pages",
+  { label: "Your first month", href: "/#pricing" },
+  { label: "Creative", href: "/#pricing" },
+  { label: "Creative + Media Buying", href: "/#pricing" },
+  { label: "Full Funnel", href: "/#pricing" },
+  { label: "Meta & Google media buying", href: "/#how" },
+  { label: "Offer & landing pages", href: "/#how" },
 ];
 
 const LEGAL_LINKS = [
+  { href: "/guarantee", label: "The Guarantee" },
   { href: "/privacy", label: "Privacy Policy" },
   { href: "/terms", label: "Terms of Service" },
   { href: "/cookies", label: "Cookie Policy" },
@@ -37,11 +37,13 @@ export function Footer() {
         <div className="lg:col-span-4 flex flex-col gap-6">
           <Logo tone="light" size="md" />
           <p className="text-white/55 text-[15px] leading-relaxed max-w-sm">
-            Digital systems that work for the modern web, and what comes next.
+            We make your ads and we run them. Video and still creative for
+            Australian businesses, live in 48 hours.
           </p>
-          <div className="text-[13px] text-white/40">
+          <div className="text-[13px] text-white/40 leading-relaxed">
             <span className="eyebrow text-white/30">Based in</span>
             <div className="mt-1">Brisbane, Australia</div>
+            <div className="mt-3">ABN 43 727 670 015</div>
           </div>
         </div>
 
@@ -53,10 +55,10 @@ export function Footer() {
           ))}
         </FooterCol>
 
-        <FooterCol title="Services" className="lg:col-span-3">
+        <FooterCol title="What we do" className="lg:col-span-3">
           {SERVICE_LINKS.map((s) => (
-            <FooterLink key={s} href="/#services">
-              {s}
+            <FooterLink key={s.label} href={s.href}>
+              {s.label}
             </FooterLink>
           ))}
         </FooterCol>
@@ -68,10 +70,10 @@ export function Footer() {
             </FooterLink>
           ))}
           <a
-            href="mailto:admin@zyradigital.org"
+            href="mailto:miguel@zyradigital.org"
             className="link-underline text-[14px] text-white/55 hover:text-white mt-2"
           >
-            admin@zyradigital.org
+            miguel@zyradigital.org
           </a>
         </FooterCol>
       </div>

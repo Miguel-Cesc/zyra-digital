@@ -26,20 +26,20 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "ZYRA DIGITAL · Digital systems that work",
+    default: "ZYRA DIGITAL · We make your ads and we run them",
     template: "%s · ZYRA DIGITAL",
   },
   description:
-    "ZYRA DIGITAL is a Brisbane-based digital studio building reliable, structured websites and digital systems for modern business. Fast. Secure. Clear.",
+    "ZYRA DIGITAL makes video and image ads for Australian businesses and runs the campaigns behind them. Live in 48 hours, with nothing for you to write, film or brief. Brisbane.",
   keywords: [
-    "digital agency Brisbane",
-    "website design Brisbane",
-    "website development",
-    "SEO",
-    "GEO",
-    "AI search",
-    "hosting",
-    "digital marketing",
+    "Meta ads Brisbane",
+    "Facebook ads agency Australia",
+    "video ad creative",
+    "AI video ads",
+    "media buying Brisbane",
+    "Google Ads Brisbane",
+    "ecommerce advertising Australia",
+    "AI ad creative",
     "ZYRA DIGITAL",
   ],
   authors: [{ name: "ZYRA DIGITAL" }],
@@ -51,23 +51,23 @@ export const metadata: Metadata = {
     locale: "en_AU",
     url: SITE_URL,
     siteName: "ZYRA DIGITAL",
-    title: "ZYRA DIGITAL · Digital systems that work",
+    title: "ZYRA DIGITAL · We make your ads and we run them",
     description:
-      "Reliable, structured websites and digital systems for modern business. Brisbane, Australia.",
+      "Video and image ads that convert, live in 48 hours, with nothing for you to brief. Brisbane, Australia.",
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "ZYRA DIGITAL · A digital presence your business can rely on.",
+        alt: "ZYRA DIGITAL · We make your ads. Then we run them.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ZYRA DIGITAL · Digital systems that work",
+    title: "ZYRA DIGITAL · We make your ads and we run them",
     description:
-      "Reliable, structured websites and digital systems for modern business.",
+      "Video and image ads that convert, live in 48 hours. Brisbane, Australia.",
     images: ["/og-image.svg"],
   },
   icons: {
@@ -87,9 +87,9 @@ const jsonLd = {
   name: "ZYRA DIGITAL",
   url: SITE_URL,
   logo: `${SITE_URL}/favicon.svg`,
-  email: "admin@zyradigital.org",
+  email: "miguel@zyradigital.org",
   description:
-    "Brisbane-based digital studio building reliable, structured websites and digital systems for modern business. Fast. Secure. Clear.",
+    "Brisbane advertising studio making video and image ad creative for Australian businesses and running the campaigns behind it.",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -115,14 +115,13 @@ const jsonLd = {
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Digital Services",
+    name: "Advertising Services",
     itemListElement: [
-      { "@type": "OfferCatalog", name: "Website Design & Development" },
-      { "@type": "OfferCatalog", name: "Hosting & Setup" },
-      { "@type": "OfferCatalog", name: "SEO & GEO / AI Search" },
-      { "@type": "OfferCatalog", name: "Digital Marketing" },
-      { "@type": "OfferCatalog", name: "Analytics" },
-      { "@type": "OfferCatalog", name: "Ongoing Management" },
+      { "@type": "OfferCatalog", name: "Video Ad Creative" },
+      { "@type": "OfferCatalog", name: "Meta Media Buying" },
+      { "@type": "OfferCatalog", name: "Google Ads Management" },
+      { "@type": "OfferCatalog", name: "Offer & Landing Page Build" },
+      { "@type": "OfferCatalog", name: "Measurement & Reporting" },
     ],
   },
   sameAs: [],

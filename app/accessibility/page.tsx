@@ -40,7 +40,7 @@ export default function AccessibilityPage() {
       <p>
         If you experience an accessibility barrier on our site, please contact
         us at{" "}
-        <a href="mailto:admin@zyradigital.org">admin@zyradigital.org</a>. We
+        <a href="mailto:miguel@zyradigital.org">miguel@zyradigital.org</a>. We
         aim to respond within a reasonable timeframe and will do our best to
         provide the information or service you need in an accessible format.
       </p>
