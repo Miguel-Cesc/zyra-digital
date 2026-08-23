@@ -27,20 +27,20 @@ does: ad creative made for you, and the media buying behind it.
 
 Page order in `app/page.tsx`:
 
-`Hero → Reel → Ticker → GuaranteePromise → HowItWorks → Demos → Toolkit → Ticker → Pricing → Proof → About → FAQ → FinalCTA → Contact`
+`Hero, Reel, Ticker, HowItWorks, Demos, WhyAI, Ticker, Pricing, Proof, About, FAQ, FinalCTA, Contact`
 
 | File | What it does |
 |---|---|
-| `components/Hero.tsx` | Aurora hero. Headline, sub, two CTAs, three stats (48hr / 0 hours of your time / $0) |
+| `components/Hero.tsx` | Aurora hero. Headline, sub, two CTAs, three stats (24hr / 100+ / $0) |
 | `components/Demos.tsx` | Exports `Reel` (full-bleed scrolling ad strip under the hero) and `Demos` (the six-demo grid). Both read the same `DEMOS` array |
 | `components/Ticker.tsx` | Auto-scrolling claim strip. Exports `TICKER_TOP` / `TICKER_MID` — **plain data lives here, not in `Sections.tsx`** (see gotcha below) |
-| `components/Sections.tsx` | `GuaranteePromise`, `HowItWorks`, `Toolkit`, `About`, `FinalCTA` |
+| `components/Sections.tsx` | `HowItWorks`, `WhyAI`, `About`, `FinalCTA` |
 | `components/StepArt.tsx` | The four mockup panels beside the how-it-works rows |
 | `components/Pricing.tsx` | First month + three plans |
 | `components/Proof.tsx` | Past client results. **Renders nothing** — `RESULTS` is empty on purpose |
 | `components/ui.tsx` | `Cta`, `Chip`, `Tick`. The shared vocabulary |
 | `lib/faqs.ts` | Single source for FAQ copy. Both the accordion and the JSON-LD read it |
-| `app/guarantee/page.tsx` | Full guarantee terms, own page |
+| `app/guarantee/page.tsx` | Full guarantee terms. Still live and linked from the footer, but pulled off the homepage and out of the top nav: the guarantee is pitched per lead in outbound email now |
 
 ## Rules this site is built under — do not quietly break these
 
@@ -51,6 +51,9 @@ Page order in `app/page.tsx`:
 - **Australian spelling.** "optimisation", not "optimization".
 - **Plain language.** If a sentence could sit unchanged on any agency's site, cut it.
 - **Not "sprint".** It is "your first month".
+- **No en or em dashes in any rendered copy.** Rewrite the sentence or use brackets. Hyphens in words like "AI-made" are fine.
+- **24 hours, not 48.** Every turnaround claim on the site says 24.
+- **Say it is AI.** The positioning is an AI creative company: new ads monthly, many angles tested, none of the production cost. Do not soften that back into a generic agency voice.
 - **Contact address is `miguel@zyradigital.org`.**
 
 ## Deploying — read this before you touch it
@@ -108,7 +111,8 @@ Deploy a preview and give me the URL, then make the changes below.
 
 ### Still open from last session
 
-- [ ] **Prices** — confirm or correct the four numbers before anything goes to production.
-- [ ] **Proof section** — if you want real client results on the page, give me the figure, the account it came from, the window it was measured over, and confirmation the client is happy for it to appear. Even unnamed, "an Australian garden retailer" is identifiable to anyone in that category.
-- [ ] **24-hour turnaround** — the site says 48 hours everywhere. If the automation genuinely delivers in 24, say so and I will change it. It is a promise you would be held to.
-- [ ] **Vercel/GitHub connection** — decide whether to wire `Miguel-Cesc/zyra-digital` to the Vercel project so pushes deploy themselves.
+- [ ] **Prices.** Confirm or correct the four numbers before anything goes to production.
+- [ ] **Proof section.** If you want real client results on the page, give me the figure, the account it came from, the window it was measured over, and confirmation the client is happy for it to appear. Even unnamed, "an Australian garden retailer" is identifiable to anyone in that category.
+- [ ] **24-hour turnaround** is now claimed sitewide. It is a promise you would be held to, so confirm the automation actually delivers in 24.
+- [ ] **100+ businesses** is claimed in the hero, the ticker and About. Confirm you are happy standing behind that number.
+- [ ] **Vercel/GitHub connection.** Decide whether to wire `Miguel-Cesc/zyra-digital` to the Vercel project so pushes deploy themselves.
