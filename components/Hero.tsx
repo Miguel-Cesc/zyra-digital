@@ -100,7 +100,7 @@ export function Hero() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
             <HeroStat value="24" suffix="hr" label="From your link to live ads" />
-            <HeroStat value="1" suffix="reply" label="All we need from you" />
+            <HeroStat value="100+" suffix="" label="Businesses advertised for" />
             <HeroStat value="$0" suffix="" label="To see your first ad" />
           </div>
         </motion.div>

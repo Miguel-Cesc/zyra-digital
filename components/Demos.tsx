@@ -116,8 +116,8 @@ export function Reel() {
     >
       <div className="aurora-soft opacity-60" />
       <p className="relative container-x mb-7 text-center text-[11px] uppercase tracking-wider2 text-white/40">
-        The formats we build &mdash; real examples land here as they clear
-        client approval
+        The formats we build. Real examples land here as they clear client
+        approval
       </p>
       <div className="relative bleed fade-x flex overflow-hidden">
         <div className="reel-track flex shrink-0 gap-4 pr-4">

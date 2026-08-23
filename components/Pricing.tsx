@@ -22,7 +22,7 @@ const TIERS = [
       "Built from your own product photography",
       "Delivered as finished files, ready to upload",
       "You keep control of the ad account",
-      "Delivery guarantee — we do not promise results on media we do not run",
+      "Delivery guarantee, because we do not promise results on media we do not run",
     ],
     featured: false,
   },

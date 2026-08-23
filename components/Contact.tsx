@@ -109,22 +109,22 @@ export function Contact() {
                   Choose the closest one
                 </option>
                 <option value="Free ad">
-                  Just the free ad for now — $0
+                  Just the free ad for now ($0)
                 </option>
                 <option value="First month">
-                  Try a first month, everything done for me — $2,000
+                  Try a first month, everything done for me ($2,000)
                 </option>
                 <option value="Creative">
-                  Make the ads, I&rsquo;ll run them — from $1,500/mo
+                  Make the ads, I&rsquo;ll run them (from $1,500/mo)
                 </option>
                 <option value="Creative + Media Buying">
-                  Make the ads and run them for me — from $3,000/mo + ad spend
+                  Make the ads and run them for me (from $3,000/mo plus ad spend)
                 </option>
                 <option value="Full Funnel">
-                  All of that plus landing pages — from $4,500/mo + ad spend
+                  All of that plus landing pages (from $4,500/mo plus ad spend)
                 </option>
                 <option value="Not sure">
-                  Not sure — tell me what fits
+                  Not sure, tell me what fits
                 </option>
               </select>
             </div>
