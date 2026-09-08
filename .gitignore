@@ -8,3 +8,7 @@ out
 .vercel
 .idea
 .vscode
+
+# build artefacts
+tsconfig.tsbuildinfo
+.claude/

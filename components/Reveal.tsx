@@ -30,7 +30,12 @@ export function Reveal({
   as?: any;
 }) {
   const reduced = useReducedMotion();
-  const offset = reduced ? { x: 0, y: 0 } : offsetMap[direction];
+
+  if (reduced) {
+    return <Component className={cn(className)}>{children}</Component>;
+  }
+
+  const offset = offsetMap[direction];
 
   const variants: Variants = {
     hidden: { opacity: 0, ...offset },
@@ -76,6 +81,12 @@ export function Stagger({
   amount?: number;
   as?: any;
 }) {
+  const reduced = useReducedMotion();
+
+  if (reduced) {
+    return <Component className={cn(className)}>{children}</Component>;
+  }
+
   const variants: Variants = {
     hidden: {},
     visible: {
@@ -110,7 +121,12 @@ export function StaggerItem({
   as?: any;
 }) {
   const reduced = useReducedMotion();
-  const offset = reduced ? { x: 0, y: 0 } : offsetMap[direction];
+
+  if (reduced) {
+    return <Component className={cn(className)}>{children}</Component>;
+  }
+
+  const offset = offsetMap[direction];
 
   const variants: Variants = {
     hidden: { opacity: 0, ...offset },

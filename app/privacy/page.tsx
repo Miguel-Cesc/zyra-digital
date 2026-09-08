@@ -129,14 +129,14 @@ export default function PrivacyPage() {
       </ul>
       <p>
         To make a request, email{" "}
-        <a href="mailto:admin@zyradigital.org">admin@zyradigital.org</a>. We
+        <a href="mailto:miguel@zyradigital.org">miguel@zyradigital.org</a>. We
         will respond within a reasonable period, generally within 30 days.
       </p>
 
       <h2>10. Complaints</h2>
       <p>
         If you believe we have breached the APPs, contact us first at{" "}
-        <a href="mailto:admin@zyradigital.org">admin@zyradigital.org</a>. We
+        <a href="mailto:miguel@zyradigital.org">miguel@zyradigital.org</a>. We
         will investigate and respond.
       </p>
       <p>
@@ -174,7 +174,7 @@ export default function PrivacyPage() {
         Brisbane, Queensland, Australia
         <br />
         Email:{" "}
-        <a href="mailto:admin@zyradigital.org">admin@zyradigital.org</a>
+        <a href="mailto:miguel@zyradigital.org">miguel@zyradigital.org</a>
       </p>
     </LegalLayout>
   );

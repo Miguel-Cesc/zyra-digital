@@ -3,49 +3,21 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
-import { SectionLabel } from "./SectionLabel";
 import { Reveal } from "./Reveal";
+import { FAQS } from "@/lib/faqs";
 import { cn } from "@/lib/utils";
-
-const FAQS = [
-  {
-    q: "What does ZYRA DIGITAL build?",
-    a: "Websites, hosting setups, digital marketing, analytics, SEO, GEO/AI search and optional ongoing management.",
-  },
-  {
-    q: "How fast can you deliver?",
-    a: "We deliver most projects within 24 to 48 hours. Larger builds take 2 to 6 weeks depending on scope, and we confirm a clear timeline before we start.",
-  },
-  {
-    q: "Do I own my website?",
-    a: "Yes. You get full access and ownership from day one. You can make changes yourself at any time, no need to wait on us.",
-  },
-  {
-    q: "Am I locked into a contract?",
-    a: "No. There are no lock-in contracts. You own your website and can manage it independently. Ongoing support is available if you want it, but it is entirely optional.",
-  },
-  {
-    q: "Do you provide hosting?",
-    a: "Yes. We can host and manage your website, or work with your existing setup.",
-  },
-  {
-    q: "What is GEO / AI search?",
-    a: "Optimisation for AI-driven discovery and answer engines. The next layer beyond traditional SEO.",
-  },
-];
 
 export function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="bg-white py-32 md:py-40">
+    <section id="faq" className="bg-white py-28 md:py-36">
       <div className="container-x grid lg:grid-cols-12 gap-y-12 lg:gap-x-16">
         <Reveal className="lg:col-span-4">
-          <SectionLabel>FAQ</SectionLabel>
           <h2 className="h-display mt-6 text-4xl md:text-5xl lg:text-[52px] text-ink">
-            Common
+            The questions
             <br />
-            <span className="text-ink/40">questions.</span>
+            <span className="text-ink/40">everyone asks.</span>
           </h2>
         </Reveal>
 

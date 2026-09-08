@@ -82,7 +82,7 @@ export default function CookiesPage() {
       <h2>6. Contact</h2>
       <p>
         Questions about cookies? Email{" "}
-        <a href="mailto:admin@zyradigital.org">admin@zyradigital.org</a>.
+        <a href="mailto:miguel@zyradigital.org">miguel@zyradigital.org</a>.
       </p>
     </LegalLayout>
   );
