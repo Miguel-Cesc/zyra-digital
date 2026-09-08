@@ -6,10 +6,10 @@ import { Reveal, Stagger, StaggerItem } from "./Reveal";
 import { cn } from "@/lib/utils";
 
 /**
- * ⚠️ THESE PRICES ARE NOT SIGNED OFF.
- * They are the recommendation from ticket 12 (`.scratch/client-one/issues/
- * 12-tier-pricing-confirmation.md`). The build spec is explicit: do not ship
- * prices Miguel has not confirmed. Confirm before this branch is deployed.
+ * Prices confirmed by Miguel on 9 September 2026 and published to production
+ * the same day. They started as the recommendation in ticket 12
+ * (`.scratch/client-one/issues/12-tier-pricing-confirmation.md`). Changing any
+ * of them is a commercial decision, so ask before editing these figures.
  */
 const TIERS = [
   {

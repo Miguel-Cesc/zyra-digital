@@ -71,7 +71,7 @@ Page order in `app/page.tsx`:
 1. **Plain data cannot be exported from a `"use client"` module and imported by a server component.** `TICKER_TOP` lives in `Ticker.tsx` for this reason. Moving it back into `Sections.tsx` fails the build with "Cannot read Symbol exports".
 2. **The dev server needs `'unsafe-eval'` in the CSP or it will not hydrate.** `next.config.js` adds it in development only; production stays strict. If the page renders but nothing is interactive, check the console for a CSP error.
 3. **Scroll-reveal animations do not fire in headless screenshots**, so captures come back blank below the fold. To screenshot the whole page, temporarily force `const reduced = true` in `components/Reveal.tsx`, build, capture, then revert.
-4. **Prices are not signed off.** `$2,000` first month, then `$1,500` / `$3,000` / `$4,500`. These are a recommendation from ticket 12 in `~/Desktop/Zyra/.scratch/client-one/issues/`. Do not deploy them to production until Miguel confirms.
+4. **Prices are confirmed and live.** `$2,000` first month, then `$1,500` / `$3,000` / `$4,500`, signed off 9 September 2026. They are on the public site now, so changing one is a commercial decision, not a copy edit.
 5. **The demo videos do not exist yet.** `DEMOS` entries have no `src`, so each tile renders an abstract mockup. Adding real clips is a data change: set `src` and `poster` and the `<video>` renders instead.
 
 ## Background, if you need more
@@ -96,8 +96,8 @@ Deploy a preview and give me the URL, then make the changes below.
 
 ### Still open from last session
 
-- [ ] **Prices.** Confirm or correct the four numbers before anything goes to production.
+- [x] **Prices.** Confirmed 9 September 2026 and live.
 - [ ] **Proof section.** If you want real client results on the page, give me the figure, the account it came from, the window it was measured over, and confirmation the client is happy for it to appear. Even unnamed, "an Australian garden retailer" is identifiable to anyone in that category.
 - [ ] **24-hour turnaround** is now claimed sitewide. It is a promise you would be held to, so confirm the automation actually delivers in 24.
-- [ ] **100+ businesses** is claimed in the hero, the ticker and About. Confirm you are happy standing behind that number.
-- [ ] **Vercel/GitHub connection.** Decide whether to wire `Miguel-Cesc/zyra-digital` to the Vercel project so pushes deploy themselves.
+- [x] **100+ businesses** confirmed, and set in figures rather than words as of 23 August 2026.
+- [x] **Vercel/GitHub connection.** Wired 8 September 2026. `main` is production, every other branch gets a preview.
