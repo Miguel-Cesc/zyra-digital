@@ -6,14 +6,15 @@ import { StepArt } from "./StepArt";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 /* ============================================================ */
-/* How it works: alternating feature rows                        */
+/* How it works: two feature rows, then the two steps that are   */
+/* entirely ours as a pair. Four identical alternating rows read  */
+/* as one long block; breaking the pattern halves the scroll.     */
 /* ============================================================ */
 
 type Step = {
   chip: string;
   title: string;
   ticks: string[];
-  cta: string;
 };
 
 const STEPS: Step[] = [
@@ -21,45 +22,43 @@ const STEPS: Step[] = [
     chip: "You send a link",
     title: "That is the whole brief",
     ticks: [
-      "A link to what you sell, and the photos already on your own site",
-      "We read what you and your competitors are running right now",
-      "No creative brief, no shoot day, no scripts to sign off",
+      "A link to what you sell, and the photos already on your site",
+      "We read what you and your competitors are running now",
+      "No brief, no shoot day, no scripts to sign off",
     ],
-    cta: "Send us a link",
   },
   {
     chip: "We make the creative",
     title: "Video and image, inside 24 hours",
     ticks: [
-      "A set of genuinely different concepts, not one idea in three crops, because that is what the platform needs to learn",
-      "Generated from your own product photography, never stock, never a synthetic person",
-      "You see everything before it runs, and one reply is all it takes to approve",
+      "Genuinely different concepts, not one idea in three crops",
+      "Built from your own product photos, never stock",
+      "You see it all first. One reply approves it",
     ],
-    cta: "See the demos",
   },
   {
     chip: "We run it",
     title: "In your ad account, not ours",
     ticks: [
-      "Campaigns built and launched inside your own ad account, so it stays yours",
-      "Ad spend goes straight from your card to the platform, never through us",
-      "Tested across hooks and angles rather than by nudging budgets",
+      "Your account, so it stays yours",
+      "Ad spend goes card to platform, never through us",
+      "Hooks and angles tested, not budgets nudged",
     ],
-    cta: "See what that costs",
   },
   {
     chip: "You see what it did",
     title: "Measured against your revenue",
     ticks: [
-      "Platforms always claim more than your books show. We report the books",
-      "Which hooks and angles actually converted, named",
-      "What changes next month, and the reason it is changing",
+      "Platforms claim more than your books show. We report the books",
+      "Which hooks and angles converted, named",
+      "What changes next month, and why",
     ],
-    cta: "Start this month",
   },
 ];
 
 export function HowItWorks() {
+  const [first, second, ...pair] = STEPS;
+
   return (
     <section id="how" className="relative bg-white py-28 md:py-36 overflow-hidden">
       <div className="container-x relative">
@@ -71,14 +70,13 @@ export function HowItWorks() {
             <span className="text-ink/40">three of them are ours.</span>
           </h2>
           <p className="mt-7 text-ink/65 text-lg leading-relaxed max-w-prose2">
-            The reason people stop advertising is that making the ads is a job
-            nobody has time for. So we automated that job. Your part is a link
-            and an approval.
+            Making the ads is the job nobody has time for, so we automated it.
+            Your part is a link and an approval.
           </p>
         </Reveal>
 
         <div className="mt-20 flex flex-col gap-20 md:gap-28">
-          {STEPS.map((s, i) => {
+          {[first, second].map((s, i) => {
             const flipped = i % 2 === 1;
             return (
               <div
@@ -98,9 +96,6 @@ export function HowItWorks() {
                       <Tick key={t}>{t}</Tick>
                     ))}
                   </ul>
-                  <Cta href="#contact" className="mt-9">
-                    {s.cta}
-                  </Cta>
                 </Reveal>
 
                 <Reveal
@@ -114,6 +109,30 @@ export function HowItWorks() {
             );
           })}
         </div>
+
+        {/* Steps three and four: entirely ours, so they sit as a pair. */}
+        <div className="mt-20 md:mt-28 grid md:grid-cols-2 gap-8 md:gap-6 lg:gap-8">
+          {pair.map((s, i) => (
+            <Reveal key={s.chip} delay={i * 0.08} className="flex flex-col">
+              <StepArt index={i + 2} />
+              <div className="mt-7">
+                <Chip>{s.chip}</Chip>
+                <h3 className="h-display mt-4 text-[26px] md:text-[30px] text-ink max-w-[20ch]">
+                  {s.title}
+                </h3>
+                <ul className="mt-6 flex flex-col gap-3">
+                  {s.ticks.map((t) => (
+                    <Tick key={t}>{t}</Tick>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-16 md:mt-20 flex justify-center">
+          <Cta href="#contact">Get a free ad</Cta>
+        </Reveal>
       </div>
     </section>
   );
@@ -126,15 +145,15 @@ export function HowItWorks() {
 const WHY_AI = [
   {
     title: "Creative that never goes stale",
-    body: "Accounts stop working because the same three ads run for six months. We can put genuinely new concepts in front of your audience every month, because making them is automated rather than booked.",
+    body: "Accounts stop working when the same three ads run for six months. Yours get new concepts every month.",
   },
   {
     title: "Twenty angles, not two",
-    body: "A shoot day buys you one idea. Generating them buys you a set, so the platform can find the hook that works instead of you paying to guess which one to film.",
+    body: "A shoot day buys one idea. Generating them buys a set, so the platform can find the hook that works.",
   },
   {
     title: "None of the production cost",
-    body: "No videographer, no editor, no studio day, no talent fee, no in-house creative on salary. That is the whole reason a small business can now run the volume of creative that used to need a team.",
+    body: "No videographer, no editor, no studio day, no talent fee, no creative on salary.",
   },
 ];
 
@@ -153,10 +172,9 @@ export function WhyAI() {
             <span className="text-white/45">without a production budget.</span>
           </h2>
           <p className="mt-7 text-white/70 text-lg leading-relaxed max-w-prose2">
-            Advertising rewards whoever can put the most good ideas in front of
-            an audience. That used to be a budget question, which is why it was
-            a large company&rsquo;s game. Generating the creative moves it back
-            to being an idea question, and you can start on a small spend.
+            Advertising rewards whoever puts the most good ideas in front of an
+            audience. That used to be a budget question. Now it is an idea one,
+            and you can start on a small spend.
           </p>
         </Reveal>
 
@@ -191,9 +209,9 @@ export function WhyAI() {
           <p className="flex items-start gap-3 max-w-2xl text-white/55 text-[14px] leading-relaxed text-left">
             <Spark className="w-3.5 h-3.5 mt-1 shrink-0 text-white/50" />
             <span>
-              Every ad still opens on a real photograph of your real product,
-              a person signs off on all of it before it runs, and no synthetic
-              face ever speaks to camera for you.
+              Every ad opens on a real photograph of your real product, a person
+              signs off before it runs, and no synthetic face ever speaks to
+              camera for you.
             </span>
           </p>
         </Reveal>
@@ -211,31 +229,29 @@ export function About() {
     <section id="about" className="bg-cloud py-28 md:py-36">
       <div className="container-x grid lg:grid-cols-12 gap-y-12 lg:gap-x-16 items-center">
         <Reveal className="lg:col-span-7">
-          <Chip>Who runs it</Chip>
-          <h2 className="h-display mt-6 text-4xl md:text-5xl lg:text-[52px] text-ink">
+          <h2 className="h-display text-4xl md:text-5xl lg:text-[52px] text-ink">
             A small team that has
             <br />
             <span className="text-ink/40">run a lot of accounts.</span>
           </h2>
           <p className="mt-8 text-ink/70 text-lg leading-relaxed max-w-2xl">
-            Between us we have run paid advertising for more than a hundred
-            businesses, across both Google Ads and Meta, in ecommerce and in
-            services. That is the whole pitch. You get people who have actually
-            spent the money and watched it work or not work, rather than an
-            account manager passing your notes to someone else.
+            Between us we have run paid advertising for{" "}
+            <span className="font-display text-ink">100+</span> businesses, on
+            Google Ads and Meta, in ecommerce and in services.
           </p>
           <p className="mt-5 text-ink/55 text-[17px] leading-relaxed max-w-2xl">
-            We are in Brisbane, we stay small on purpose, and you deal with the
-            same people every month.
+            You deal with the people who spent the money and watched it work or
+            not work. We are in Brisbane, we stay small on purpose, and it is
+            the same people every month.
           </p>
         </Reveal>
 
         <Stagger className="lg:col-span-5 grid gap-3" staggerChildren={0.07}>
           {[
-            { k: "Google Ads", v: "Search, Shopping and Performance Max, across ecommerce and lead generation" },
-            { k: "Meta", v: "Advantage+ and manual, creative-led rather than budget-led" },
-            { k: "AI creative", v: "Video and still ads generated from your own product photography, at volume" },
-            { k: "Measurement", v: "Pixels, events, and the gap between what a platform claims and what you banked" },
+            { k: "Google Ads", v: "Search, Shopping and Performance Max" },
+            { k: "Meta", v: "Advantage+ and manual, creative led not budget led" },
+            { k: "AI creative", v: "Video and stills from your own product photos, at volume" },
+            { k: "Measurement", v: "The gap between what a platform claims and what you banked" },
           ].map((row) => (
             <StaggerItem key={row.k} className="card-hover p-6">
               <div className="font-display text-[19px] text-ink">{row.k}</div>
@@ -270,7 +286,7 @@ export function FinalCTA() {
           </h2>
           <p className="mt-7 text-white/65 text-lg max-w-xl relative">
             One ad, built from your own photos, at no cost and with nothing
-            attached to it. If it is no good, you have lost an email.
+            attached. If it is no good, you have lost an email.
           </p>
           <div className="mt-10 relative">
             <Cta href="#contact" tone="light">

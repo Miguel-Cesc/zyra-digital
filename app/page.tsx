@@ -1,6 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { Ticker, TICKER_TOP, TICKER_MID } from "@/components/Ticker";
+import { Ticker, TICKER_TOP } from "@/components/Ticker";
 import { Reel, Demos } from "@/components/Demos";
 import {
   HowItWorks,
@@ -46,7 +46,6 @@ export default function HomePage() {
         <HowItWorks />
         <Demos />
         <WhyAI />
-        <Ticker items={TICKER_MID} reverse />
         <Pricing />
         {/* Renders nothing until real, permissioned client results exist. */}
         <Proof />

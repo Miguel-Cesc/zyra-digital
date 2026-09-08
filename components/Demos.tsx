@@ -1,7 +1,7 @@
 "use client";
 
 import { Spark } from "./Spark";
-import { Chip, Cta } from "./ui";
+import { Cta } from "./ui";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 /**
@@ -116,8 +116,7 @@ export function Reel() {
     >
       <div className="aurora-soft opacity-60" />
       <p className="relative container-x mb-7 text-center text-[11px] uppercase tracking-wider2 text-white/40">
-        The formats we build. Real examples land here as they clear client
-        approval
+        The formats we build. Client work lands here as it clears approval
       </p>
       <div className="relative bleed fade-x flex overflow-hidden">
         <div className="reel-track flex shrink-0 gap-4 pr-4">
@@ -139,17 +138,14 @@ export function Demos() {
     <section id="work" className="bg-white py-28 md:py-36">
       <div className="container-x">
         <Reveal className="max-w-3xl">
-          <Chip>The work</Chip>
           <h2 className="h-display mt-6 text-4xl md:text-5xl lg:text-[56px] text-ink">
             Six demos.
             <br />
             <span className="text-ink/40">Video and image both.</span>
           </h2>
           <p className="mt-7 text-ink/65 text-lg leading-relaxed max-w-prose2">
-            These are ours, not a client&rsquo;s. Every one carries no brand,
-            because showing you someone else&rsquo;s ad and implying they hired
-            us would be a lie. Yours are built from your own photos, and you get
-            both moving and still versions of the same idea.
+            These are ours, not a client&rsquo;s, and none of them carries a
+            brand. Yours are built from your own photos, moving and still.
           </p>
         </Reveal>
 
@@ -183,7 +179,7 @@ export function Demos() {
         </Stagger>
 
         <Reveal className="mt-14 flex justify-center">
-          <Cta href="#contact">Get one for your business</Cta>
+          <Cta href="#contact">Get a free ad</Cta>
         </Reveal>
       </div>
     </section>

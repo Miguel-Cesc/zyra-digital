@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
-import { Chip } from "./ui";
 import { Reveal } from "./Reveal";
 import { FAQS } from "@/lib/faqs";
 import { cn } from "@/lib/utils";
@@ -15,7 +14,6 @@ export function FAQ() {
     <section id="faq" className="bg-white py-28 md:py-36">
       <div className="container-x grid lg:grid-cols-12 gap-y-12 lg:gap-x-16">
         <Reveal className="lg:col-span-4">
-          <Chip>FAQ</Chip>
           <h2 className="h-display mt-6 text-4xl md:text-5xl lg:text-[52px] text-ink">
             The questions
             <br />

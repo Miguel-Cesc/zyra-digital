@@ -52,9 +52,8 @@ export function Contact() {
             <span className="text-ink/40">you sell.</span>
           </h2>
           <p className="mt-7 text-ink/65 text-lg leading-relaxed max-w-md">
-            Send us your business name and a link to your products. We&rsquo;ll
-            come back with a free ad and a straight answer about whether we can
-            help.
+            Your business name and a link to your products is enough. We come
+            back with a free ad and a straight answer.
           </p>
 
           <dl className="mt-12 flex flex-col gap-6">

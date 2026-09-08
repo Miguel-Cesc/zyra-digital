@@ -18,11 +18,11 @@ const TIERS = [
     cadence: "per month",
     blurb: "We make the ads. You run them.",
     features: [
-      "An agreed set of genuinely new concepts every month",
+      "New concepts every month, the count agreed up front",
       "Built from your own product photography",
-      "Delivered as finished files, ready to upload",
-      "You keep control of the ad account",
-      "Delivery guarantee, because we do not promise results on media we do not run",
+      "Finished files, ready to upload",
+      "You keep the ad account",
+      "Delivery guarantee. We do not promise results on media we do not run",
     ],
     featured: false,
   },
@@ -33,10 +33,10 @@ const TIERS = [
     blurb: "We make the ads and we run the account.",
     features: [
       "Everything in Creative",
-      "Campaigns built and run inside your own ad account",
-      "Hooks and angles tested against each other, not budgets nudged",
-      "Monthly numbers reported against your revenue, not the platform's",
-      "The money-back guarantee covers your first month",
+      "Campaigns run inside your own ad account",
+      "Hooks and angles tested, not budgets nudged",
+      "Monthly numbers against your revenue, not the platform's",
+      "Money-back guarantee on your first month",
     ],
     featured: true,
   },
@@ -47,9 +47,9 @@ const TIERS = [
     blurb: "The ads, the account, and what they point at.",
     features: [
       "Everything in Creative + Media Buying",
-      "The offer itself rebuilt, if the offer is the problem",
-      "Landing pages built to match the ad rather than the homepage",
-      "Measurement set up end to end and checked before launch",
+      "The offer rebuilt, if the offer is the problem",
+      "Landing pages built to match the ad, not the homepage",
+      "Measurement set up end to end before launch",
     ],
     featured: false,
   },
@@ -76,14 +76,13 @@ export function Pricing() {
             <Spark className="absolute -right-16 -bottom-20 w-72 text-white/[0.07] pointer-events-none" />
             <div className="relative grid lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7">
-                <div className="eyebrow text-white/55">Start here</div>
-                <h3 className="h-display mt-3 text-3xl md:text-[42px] text-white">
+                <h3 className="h-display text-3xl md:text-[42px] text-white">
                   Your first month
                 </h3>
                 <p className="mt-5 text-white/70 text-[17px] leading-relaxed max-w-xl">
                   One price whichever plan you are heading for, and only the
-                  scope changes. This is the month the guarantee covers, and the
-                  whole fee comes off your next invoice if you carry on.
+                  scope changes. The guarantee covers this month, and the fee
+                  comes off your next invoice if you carry on.
                 </p>
               </div>
               <div className="lg:col-span-5 lg:text-right">
@@ -193,9 +192,9 @@ Then, if it worked
           <p className="flex items-start gap-3 max-w-2xl text-ink/55 text-[14px] leading-relaxed">
             <Spark className="w-3.5 h-3.5 mt-1 shrink-0 text-teal-deep" />
             <span>
-              Ad spend is separate. It goes straight from your card to the ad platform, we
-              never invoice it and we never take a cut of it. No lock-in on any
-              plan, one month&rsquo;s notice to stop.
+              Ad spend goes straight from your card to the platform. We never
+              invoice it and never take a cut. No lock-in, one month&rsquo;s
+              notice to stop.
             </span>
           </p>
         </Reveal>

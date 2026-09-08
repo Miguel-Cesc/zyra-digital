@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 import { Spark } from "./Spark";
 import { Chip, Cta } from "./ui";
 
@@ -37,7 +36,7 @@ export function Hero() {
       <Spark className="absolute -left-48 bottom-[-8rem] w-[560px] text-white/[0.035] pointer-events-none" />
       <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/20 to-transparent pointer-events-none" />
 
-      <div className="container-x relative pt-28 sm:pt-32 md:pt-44 pb-24 md:pb-32 flex flex-col items-center text-center">
+      <div className="container-x relative pt-24 sm:pt-28 md:pt-32 pb-20 md:pb-24 flex flex-col items-center text-center">
         <motion.div
           custom={0}
           initial="hidden"
@@ -66,9 +65,8 @@ export function Hero() {
           animate="visible"
           variants={fadeUp}
         >
-          AI-made video and image ads, live inside 24 hours, with nothing for
-          you to write, film or brief. Send a link to what you sell. We build
-          the creative, then we run the campaigns behind it.
+          Send a link to what you sell. We build the video and image ads with
+          AI, then run the campaigns behind them.
         </motion.p>
 
         <motion.div
@@ -86,36 +84,22 @@ export function Hero() {
               See pricing
             </Link>
           </div>
-          <p className="text-white/55 text-[13px]">
-            One ad, made from your own photos. No charge, nothing attached.
-          </p>
         </motion.div>
 
         <motion.div
-          className="mt-16 sm:mt-20 w-full max-w-3xl border-t border-white/12 pt-8"
+          className="mt-12 sm:mt-14 w-full max-w-3xl border-t border-white/12 pt-8"
           custom={4}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-            <HeroStat value="24" suffix="hr" label="From your link to live ads" />
+          <div className="grid grid-cols-3 gap-3 sm:gap-8">
+            <HeroStat value="24" suffix="hr" label="From link to live ads" />
             <HeroStat value="100+" suffix="" label="Businesses advertised for" />
-            <HeroStat value="$0" suffix="" label="To see your first ad" />
+            <HeroStat value="$0" suffix="" label="For your first ad" />
           </div>
         </motion.div>
 
-        <motion.a
-          href="#reel"
-          aria-label="Scroll to next section"
-          className="mt-14 inline-flex flex-col items-center gap-2 text-white/50 hover:text-white transition-colors"
-          initial={{ opacity: reduced ? 1 : 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: reduced ? 0 : 1.1, duration: reduced ? 0 : 0.6 }}
-        >
-          <span className="eyebrow">Scroll</span>
-          <ChevronDown className="w-4 h-4 animate-scroll-bounce" />
-        </motion.a>
       </div>
     </section>
   );
@@ -133,14 +117,14 @@ function HeroStat({
   return (
     <div className="flex flex-col items-center gap-1.5">
       <div className="flex items-baseline gap-0.5">
-        <span className="font-display text-4xl lg:text-5xl text-white tracking-tightest leading-none">
+        <span className="font-display text-3xl sm:text-4xl lg:text-5xl text-white tracking-tightest leading-none">
           {value}
         </span>
         {suffix && (
           <span className="font-display text-xl text-white/60">{suffix}</span>
         )}
       </div>
-      <span className="text-[11px] uppercase tracking-wider2 text-white/45">
+      <span className="text-[10px] sm:text-[11px] uppercase tracking-wider2 text-white/45 leading-snug">
         {label}
       </span>
     </div>

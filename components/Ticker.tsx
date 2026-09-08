@@ -4,25 +4,20 @@ export const TICKER_TOP = [
   "24 hours from brief to live",
   "AI video and image creative",
   "100+ businesses advertised for",
+  "Meta and Google",
+  "Your ad account, not ours",
+  "New creative every month",
   "No lock-in",
   "Money-back guarantee",
   "Brisbane, Australia",
 ];
 
-export const TICKER_MID = [
-  "You approve. We do everything else",
-  "Meta and Google",
-  "Your ad account, not ours",
-  "Ad spend paid straight to the platform",
-  "New creative every month, not one shoot a year",
-  "Reported against your revenue",
-];
-
 /**
- * Auto-scrolling claim strip. Replaces the old static four-icon trust row —
- * a row of stock glyphs in rounded tiles is exactly the templated look we are
+ * Auto-scrolling claim strip. Replaces the old static four-icon trust row: a
+ * row of stock glyphs in rounded tiles is exactly the templated look we are
  * trying to get away from, and a moving strip carries more claims in less
- * vertical space.
+ * vertical space. One per page only. Two of these on one page reads as filler
+ * and the second one repeated claims already made in How it works and Pricing.
  */
 export function Ticker({
   items,
