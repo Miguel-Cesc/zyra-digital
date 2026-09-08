@@ -56,30 +56,15 @@ Page order in `app/page.tsx`:
 - **Say it is AI.** The positioning is an AI creative company: new ads monthly, many angles tested, none of the production cost. Do not soften that back into a generic agency voice.
 - **Contact address is `miguel@zyradigital.org`.**
 
-## Deploying — read this before you touch it
+## Deploying
 
-**Neither GitHub repo is connected to Vercel.** This was verified, not assumed:
+**The Vercel project is connected to `Miguel-Cesc/zyra-digital`** (connected 8 September 2026, verified by a push that built on its own).
 
-- Vercel project `zyra-digital` (`prj_dtnQ9jpDiWqD5NVpLIj6N5qWOvvp`) is owned by **`miguel-cesc's projects`**, not Ibeth's account.
-- `zyradigital.org`, `www.zyradigital.org` and `zyra-digital.vercel.app` are all verified on that project.
-- The project's `link` field is absent and **no GitHub integration is installed** on the Vercel account. `git push` deploys nothing, to either repo.
-- All six deployments show `source: cli` — hand-pushed with `vercel --prod` on 3 May 2026. Five errored; the sixth is what is live.
-- The `ibetjaimes8-cmyk/zyra-digital` name on those deployments is just the git remote of the folder the CLI ran from. It is metadata, not a connection.
-- **Live production is commit `fb6a51a`, the first commit.** Commit `3ee2ea2` "Harden deployment security" was never deployed — confirmed independently: `curl -sI https://zyradigital.org` returns no `content-security-policy` header.
-
-`.vercel/project.json` in this folder points at that production project. **A bare
-`vercel --prod` from here goes straight to the live domain.** Deploy to a preview
-first and show Miguel the URL:
-
-```bash
-cd ~/Documents/GitHub/zyra-digital-rebuild && npx vercel
-```
-
-Only promote to production once he has looked at the preview and said yes.
-The better long-term fix is connecting the Vercel project to
-`Miguel-Cesc/zyra-digital` so `main` becomes the source of truth — that needs
-the GitHub app installed on his Vercel account, which is a browser step he does
-himself.
+- Vercel project `zyra-digital` (`prj_dtnQ9jpDiWqD5NVpLIj6N5qWOvvp`) is owned by `miguel-cesc's projects`. `zyradigital.org`, `www.zyradigital.org` and `zyra-digital.vercel.app` are all verified on it.
+- Production branch is `main`. **A push to `main` deploys to the live domain.** Every other branch gets a preview build automatically.
+- Live production is still commit `fb6a51a`, the first commit, until something newer reaches `main`. Commit `3ee2ea2` "Harden deployment security" has never been deployed, confirmed by `curl -sI https://zyradigital.org` returning no `content-security-policy` header.
+- `.vercel/project.json` points at the production project, so a bare `vercel --prod` from this folder still goes straight to the live domain. There is no reason to run it now that pushes work.
+- The old clone at `~/Documents/GitHub/zyra-digital` (remote `ibetjaimes8-cmyk/zyra-digital`) is still not connected to anything. Ignore it.
 
 ## Gotchas that will cost you an hour each
 
