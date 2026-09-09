@@ -205,14 +205,67 @@ export function WhyAI() {
           ))}
         </Stagger>
 
-        <Reveal className="mt-12 flex justify-center">
-          <p className="flex items-start gap-3 max-w-2xl text-white/55 text-[14px] leading-relaxed text-left">
-            <Spark className="w-3.5 h-3.5 mt-1 shrink-0 text-white/50" />
-            <span>
-              Every ad opens on a real photograph of your real product, a person
-              signs off before it runs, and no synthetic face ever speaks to
-              camera for you.
-            </span>
+      </div>
+    </section>
+  );
+}
+
+
+/* ============================================================ */
+/* The trust objection: the one everybody asks before pricing    */
+/* ============================================================ */
+
+const TELLS = [
+  {
+    k: "Your real product",
+    v: "Every ad opens on a photograph of the thing you actually sell. Never stock, never a render of a product that does not exist.",
+  },
+  {
+    k: "Nobody synthetic",
+    v: "No generated face speaks to camera for you, so the uncanny valley never gets a chance to open.",
+  },
+  {
+    k: "A person signs it off",
+    v: "Nothing runs until someone here has watched it and cut whatever reads as synthetic.",
+  },
+];
+
+export function Trust() {
+  return (
+    <section id="trust" className="bg-white py-28 md:py-36">
+      <div className="container-x">
+        <Reveal className="max-w-3xl">
+          <h2 className="h-display text-4xl md:text-5xl lg:text-[52px] text-ink">
+            The AI look is the problem.
+            <br />
+            <span className="text-ink/40">Not the AI.</span>
+          </h2>
+          <p className="mt-7 text-ink/65 text-lg leading-relaxed max-w-prose2">
+            What puts customers off is the tell: the warped hand, the face that
+            is not quite a face, the product that changes shape between frames.
+            Removing those is most of the work.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.05} className="mt-16 grid md:grid-cols-3 border-t border-black/[0.08]">
+          {TELLS.map((t) => (
+            <div
+              key={t.k}
+              className="py-8 md:py-10 md:px-8 md:first:pl-0 md:last:pr-0 border-b last:border-b-0 md:border-b-0 border-black/[0.08] md:border-l md:first:border-l-0 md:border-l-black/[0.08]"
+            >
+              <div className="font-display text-[19px] text-ink">{t.k}</div>
+              <p className="mt-2.5 text-ink/60 text-[15px] leading-relaxed">
+                {t.v}
+              </p>
+            </div>
+          ))}
+        </Reveal>
+
+        <Reveal delay={0.1} className="mt-14 max-w-2xl">
+          <p className="text-ink/70 text-lg leading-relaxed">
+            Anyone can put a prompt into a video model and get something back.
+            The gap between that and an ad that holds up in a feed is the whole
+            job, and that part is ours.
           </p>
         </Reveal>
       </div>
@@ -221,8 +274,15 @@ export function WhyAI() {
 }
 
 /* ============================================================ */
-/* About: the team, deliberately unnamed                         */
+/* About: the team                                               */
 /* ============================================================ */
+
+/**
+ * Set this to the photo's path once the file is in `public/`, e.g.
+ * "/team.jpg". Left null, About renders exactly as it did before, so a
+ * missing file can never ship a broken image.
+ */
+const TEAM_PHOTO: string | null = null;
 
 export function About() {
   return (
@@ -234,8 +294,17 @@ export function About() {
             <br />
             <span className="text-ink/40">run a lot of accounts.</span>
           </h2>
+          {TEAM_PHOTO && (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={TEAM_PHOTO}
+              alt="Miguel and Ibeth, who run Zyra Digital"
+              className="mt-8 w-full max-w-2xl aspect-[3/2] object-cover rounded-3xl border border-black/5 shadow-card"
+            />
+          )}
           <p className="mt-8 text-ink/70 text-lg leading-relaxed max-w-2xl">
-            Between us we have run paid advertising for{" "}
+            Zyra is Miguel and Ibeth. Between us we have run paid advertising
+            for{" "}
             <span className="font-display text-ink">100+</span> businesses, on
             Google Ads and Meta, in ecommerce and in services.
           </p>

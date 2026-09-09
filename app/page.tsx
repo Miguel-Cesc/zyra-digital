@@ -5,11 +5,13 @@ import { Reel, Demos } from "@/components/Demos";
 import {
   HowItWorks,
   WhyAI,
+  Trust,
   About,
   FinalCTA,
 } from "@/components/Sections";
 import { Pricing } from "@/components/Pricing";
 import { Proof } from "@/components/Proof";
+import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { FAQStructuredData } from "@/components/FAQStructuredData";
 import { Contact } from "@/components/Contact";
@@ -46,9 +48,12 @@ export default function HomePage() {
         <HowItWorks />
         <Demos />
         <WhyAI />
+        <Trust />
         <Pricing />
         {/* Renders nothing until real, permissioned client results exist. */}
         <Proof />
+        {/* Renders nothing until real, permissioned client quotes exist. */}
+        <Testimonials />
         <About />
         <FAQ />
         <FinalCTA />
