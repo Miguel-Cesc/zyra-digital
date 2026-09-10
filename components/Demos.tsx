@@ -2,6 +2,7 @@
 
 import { Spark } from "./Spark";
 import { Cta } from "./ui";
+import { LazyVideo } from "./LazyVideo";
 import { Reveal, Stagger, StaggerItem } from "./Reveal";
 
 /**
@@ -82,16 +83,10 @@ function Tile({ demo, index }: { demo: Demo; index: number }) {
   return (
     <div className="relative w-[168px] sm:w-[208px] shrink-0 aspect-[4/5] rounded-2xl overflow-hidden">
       {demo.src ? (
-        <video
+        <LazyVideo
           className="absolute inset-0 w-full h-full object-cover"
           src={demo.src}
           poster={demo.poster}
-          muted
-          loop
-          playsInline
-          autoPlay
-          preload="none"
-          aria-hidden="true"
         />
       ) : (
         <AdMock index={index} name={demo.name} kind={demo.kind} />
@@ -159,14 +154,10 @@ export function Demos() {
                 <div className="w-full">
                   <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-black/5 shadow-card group-hover:shadow-cardHover transition-shadow">
                     {d.src ? (
-                      <video
+                      <LazyVideo
                         className="absolute inset-0 w-full h-full object-cover"
                         src={d.src}
                         poster={d.poster}
-                        muted
-                        loop
-                        playsInline
-                        preload="none"
                       />
                     ) : (
                       <AdMock index={i} name={d.name} kind={d.kind} />
