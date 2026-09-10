@@ -8,11 +8,25 @@ import { Reveal, Stagger, StaggerItem } from "./Reveal";
 /**
  * The demo set.
  *
- * Hard constraint carried from the build spec: no real brand names, no real
- * logos, no recognisable brand identity in any demo. Categories and formats
- * only. `src` and `poster` are empty until the real clips exist; a tile with
- * no `src` renders its gradient placeholder instead, so dropping the files in
- * later is a data change and nothing else.
+ * Every clip is AI-generated footage from Pixabay, labelled "AI generated"
+ * on its source page and used under the Pixabay Content License (commercial
+ * use, no attribution). That licence forbids "giving the impression that
+ * Content was created by you", which is why the reel caption and the Demos
+ * copy both say "example footage". Keep that wording if you swap a clip in,
+ * and keep it until every tile is footage Zyra actually made.
+ *
+ * Chosen for realism: each was checked frame by frame at tile size for
+ * warping, merging geometry, wrong-way smoke or water, gibberish text, faces
+ * and logos. Sources, so any clip can be traced or replaced:
+ *   backyard-barbecue  pixabay.com/videos/ai-generated-barbeque-bbq-grill-359867/
+ *   lighting           pixabay.com/videos/ai-generated-electricity-light-bulb-374414/
+ *   garden             pixabay.com/videos/ai-generated-gardening-sprinkler-348087/
+ *   cafe               pixabay.com/videos/ai-generated-coffee-machine-machine-356213/
+ *   hardware           pixabay.com/videos/ai-generated-screwdriver-241304/
+ *   on-the-grill       pixabay.com/videos/ai-generated-hamburgers-burger-food-358379/
+ *
+ * Files are made with scripts/encode-demo.sh. A tile with no `src` falls back
+ * to its gradient placeholder.
  */
 export type Demo = {
   name: string;
@@ -22,12 +36,12 @@ export type Demo = {
 };
 
 export const DEMOS: Demo[] = [
-  { name: "Product spotlight", kind: "15 second video" },
-  { name: "Offer card", kind: "Static image" },
-  { name: "Range showcase", kind: "20 second video" },
-  { name: "Seasonal promo", kind: "Static image" },
-  { name: "Problem to solution", kind: "20 second video" },
-  { name: "Price drop", kind: "Static image" },
+  { name: "Backyard barbecue", kind: "Video", src: "/demos/backyard-barbecue.mp4", poster: "/demos/backyard-barbecue.webp" },
+  { name: "Lighting", kind: "Video", src: "/demos/lighting.mp4", poster: "/demos/lighting.webp" },
+  { name: "Garden", kind: "Video", src: "/demos/garden.mp4", poster: "/demos/garden.webp" },
+  { name: "Cafe", kind: "Video", src: "/demos/cafe.mp4", poster: "/demos/cafe.webp" },
+  { name: "Hardware", kind: "Video", src: "/demos/hardware.mp4", poster: "/demos/hardware.webp" },
+  { name: "On the grill", kind: "Video", src: "/demos/on-the-grill.mp4", poster: "/demos/on-the-grill.webp" },
 ];
 
 /* ============================================================ */
@@ -111,7 +125,7 @@ export function Reel() {
     >
       <div className="aurora-soft opacity-60" />
       <p className="relative container-x mb-7 text-center text-[11px] uppercase tracking-wider2 text-white/40">
-        The formats we build. Client work lands here as it clears approval
+        Example footage in the style we make
       </p>
       <div className="relative bleed fade-x flex overflow-hidden">
         <div className="reel-track flex shrink-0 gap-4 pr-4">
@@ -134,13 +148,13 @@ export function Demos() {
       <div className="container-x">
         <Reveal className="max-w-3xl">
           <h2 className="h-display mt-6 text-4xl md:text-5xl lg:text-[56px] text-ink">
-            Six demos.
+            Six examples.
             <br />
-            <span className="text-ink/40">Video and image both.</span>
+            <span className="text-ink/40">Not one looks like AI.</span>
           </h2>
           <p className="mt-7 text-ink/65 text-lg leading-relaxed max-w-prose2">
-            These are ours, not a client&rsquo;s, and none of them carries a
-            brand. Yours are built from your own photos, moving and still.
+            Example footage, and every clip is AI generated. Yours are built
+            from your own product photos, moving and still.
           </p>
         </Reveal>
 

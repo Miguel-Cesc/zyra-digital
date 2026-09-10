@@ -48,6 +48,7 @@ Page order in `app/page.tsx`:
 - **No stock icon set.** The `Spark` is the only mark. Section labels are a rule plus a word. Only the hamburger and the FAQ plus remain, because they are controls.
 - **Never fabricate a number, a testimonial or a client.** This is why `Proof` is empty and why the demo mockups carry no words or figures.
 - **No real brand names or logos in any demo.** Categories and formats only.
+- **The demo clips are Pixabay AI footage, not Zyra's work, and the page must keep saying "example footage".** The Pixabay Content License forbids "giving the impression that Content was created by you". The reel caption and the Demos copy carry that wording on purpose. Keep it until every tile is something Zyra made. Sources and the QA each clip passed are listed above `DEMOS` in `components/Demos.tsx`.
 - **Australian spelling.** "optimisation", not "optimization".
 - **Plain language.** If a sentence could sit unchanged on any agency's site, cut it.
 - **Not "sprint".** It is "your first month".
@@ -72,7 +73,7 @@ Page order in `app/page.tsx`:
 2. **The dev server needs `'unsafe-eval'` in the CSP or it will not hydrate.** `next.config.js` adds it in development only; production stays strict. If the page renders but nothing is interactive, check the console for a CSP error.
 3. **Scroll-reveal animations do not fire in headless screenshots**, so captures come back blank below the fold. To screenshot the whole page, temporarily force `const reduced = true` in `components/Reveal.tsx`, build, capture, then revert.
 4. **Prices are confirmed and live.** `$2,000` first month, then `$1,500` / `$3,000` / `$4,500`, signed off 9 September 2026. They are on the public site now, so changing one is a commercial decision, not a copy edit.
-5. **The demo videos do not exist yet.** `DEMOS` entries have no `src`, so each tile renders an abstract mockup. Adding real clips is a data change: set `src` and `poster` and the `<video>` renders instead.
+5. **Demo clips go through `scripts/encode-demo.sh`**, never straight into `public/`. It crops to 4:5, caps the bitrate and writes a poster; a raw source is 5 to 30 MB. Tiles play through `LazyVideo`, which only fetches a clip once it is on screen. Measured: the first screen downloads 134 KB of stills and no video, largest paint under a second. Swapping a clip is a data change in `DEMOS`.
 
 ## Background, if you need more
 

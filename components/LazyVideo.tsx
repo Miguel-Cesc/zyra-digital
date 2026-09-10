@@ -37,7 +37,7 @@ export function LazyVideo({
           video.pause();
         }
       },
-      { rootMargin: "200px" }
+      { threshold: 0.1 }
     );
     io.observe(video);
     return () => io.disconnect();
